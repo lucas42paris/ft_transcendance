@@ -7,7 +7,7 @@ Le projet a été réalisé avec Benjamin Aubignat, Maxime Saintonge et Félix B
 
 __Voici les fonctionnalités à implémenter__ :
 
-* Connexion au site via l'intranet 42.
+* Connexion au site via l'OAuth de l'intranet 42.
 * Système de compte utilisateur avec la possibilité de modifier son surnom, ajouter/modifier son avatar, activer l'authentification à deux facteurs (2FA).
 * Reproduire le célèbre jeu Pong. Les utilisateurs doivent pouvoir jouer les uns contre les autres avec un système de matchmaking.
 * Un système de Chat permettant la création de channels, l'envoi de messages privés et la gestion des utilisateurs.
