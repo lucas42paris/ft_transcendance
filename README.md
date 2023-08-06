@@ -3,7 +3,8 @@
 🇫🇷
 
 ft_transcendance est le dernier projet du tronc commun de l'École 42, consistant à créer un site web.
-Le projet a été réalisé avec Benjamin Aubignat, Maxime Saintonge et Félix Barrière 🫡
+
+Le projet a été réalisé avec Benjamin Aubignat, Maxime Saintonge et Félix Barrière.
 
 __Voici les fonctionnalités à implémenter__ :
 
