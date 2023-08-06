@@ -21,7 +21,9 @@ __Technologies utilisées__ :
 
 🇺🇸
 
-ft_transcendence is the last project of the common core of the School 42, consisting in creating a website.
+ft_transcendence is the last project of the common core of the School 42, consisting in creating a website.  
+The project was carried out with Benjamin Aubignat, Maxime Saintonge and Félix Barrière.
+
 
 __Features to implement__:
 
