@@ -30,7 +30,7 @@ __Features to implement__:
 * User account system with the possibility of modifying your username, adding/modifying your avatar, enabling two-factor authentication (2FA).
 * Reproduce the famous Pong game. Users must be able to play against each other with a matchmaking system.
 * A Chat system allowing the creation of channels, the sending of private messages and the management of users.
-* A social system, where users can add other users as friends, block them, invite them to Pong games, see their friends' Pong games live (spectator mode).
+* A Social system, where users can add other users as friends, block them, invite them to Pong games, see their friends' Pong games live (spectator mode).
 
 __Technologies used__:
 
