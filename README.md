@@ -35,3 +35,5 @@ __Technologies used__:
 * Backend: NestJS and Prisma/PostgreSQL for the database.
 * Frontend: Typescript and React.
 * Docker.
+
+![Rating](rating.png)
