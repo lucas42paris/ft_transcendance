@@ -1,0 +1,41 @@
+.notification {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2f3136;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  position: fixed;
+  bottom: 400px;
+  left: 50%;
+  transform: translateX(-60%);
+  width: 39%;
+  padding: 1px;
+}
+
+.notification p {
+  margin-bottom: 1vh;
+  font-size: 15px;
+}
+
+.accept-button,
+.decline-button {
+  margin: 3px;
+  padding: 2px 8px;
+  margin-top: 9px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.accept-button {
+  background-color: #43b581;
+  color: white;
+}
+
+.decline-button {
+  background-color: #e86060;
+  color: white;
+}

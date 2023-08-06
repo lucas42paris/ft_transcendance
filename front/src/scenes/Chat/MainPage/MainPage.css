@@ -1,0 +1,132 @@
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100vh;
+	overflow: hidden;
+}
+
+.userbutton {
+	display: flex;
+	flex-direction: row;
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 0.625em 1.25em;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.1s;
+}
+
+.userbutton:hover {
+	background-color: white;
+	color: #008080;
+}
+
+.userbutton:active {
+	background-color: white;
+	color: #008080;
+}
+
+.dropdown-item {
+	padding: 10px;
+	border-bottom: 1px solid #ddd;
+}
+  
+  .dropdown-item:last-child {
+	border-bottom: none;
+}
+  
+
+.chat-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.chat-section, 
+.channel-section {
+    flex: 1;
+    overflow: auto;
+    display: none;
+}
+
+.chat-section.active, 
+.channel-section.active {
+    display: block;
+}
+
+.popup, .overlay {
+	z-index: 2;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	position: fixed;
+}
+
+.overlay {
+	background: rgba(49, 49, 49, 0.8);
+}
+
+.popup-content {
+	z-index: 2;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	line-height: 1.4;
+	background: #008080;
+	padding: 0.875em 1.75em;
+	border-radius: 0.1875em;
+	max-width: 37.5em;
+	min-width: 18.75em;
+}
+
+.close-popup {
+	position: absolute;
+	top: 0.625em;
+	right: 0.625em;
+	padding: 0.3125em 0.4375em;
+}
+
+.chat-page .header-body {
+	margin: 0;
+	border-radius: 0;
+	border: 0.0625em solid white;
+}
+
+.sidebar {
+	flex-basis: 15%;
+	width: 15%;
+	background-color: rgba(74, 102, 104, 0.3);
+	color: white;
+	border: 0.0625em solid white;
+}
+
+.first-line {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 1em;
+}
+
+.first-line button:not(:last-child) {
+	margin-right: 0.625em;
+}
+
+.icons {
+	margin-right: 0.625em;
+}
+
+.channels-text {
+	margin-left: 0.625em;
+}
+
+.sidebar i.fas {
+	font-size: 0.75em;
+}

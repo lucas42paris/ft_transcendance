@@ -1,0 +1,67 @@
+.editUserAvatar {
+    max-width: 130px;
+    height: 130px;
+    border-radius: 50%;
+}
+
+.editUserProfileContainer {
+    margin: 0% 32% 1% 32%;
+}
+
+.avatarChange {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3%;
+}
+
+.avatarChangeButtonContainer {
+    display: flex;
+    margin: 5%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.avatarChangeButton {
+    color: transparent;
+}
+
+.avatarChangeButton::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+
+.avatarChangeButton::before {
+    content: 'Change avatar';
+    color: black;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.avatarChangeButton:hover::before {
+    border-color: black;
+}
+
+.editUserInformations {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border: solid 1px;
+    margin: 3%;
+    padding: 5%;
+    background-color: rgb(10, 37, 39);
+}
+
+.editUserInformationKey {
+    margin-bottom: 1%;
+}
+
+.tfaContainer {
+    margin: 3% 0% 3% 0%;
+    display: flex;
+    justify-content: space-between;
+}

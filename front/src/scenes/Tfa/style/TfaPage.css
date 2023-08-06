@@ -1,0 +1,16 @@
+.tfaInformations {
+    color: white;
+    font-size: large;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    border: solid white 1px;
+    margin: 17%;
+    padding: 5% 15% 5% 15%;
+    background-color: rgb(10, 37, 39);
+}
+
+.tfaInformationKey {
+    margin-bottom: 1%;
+    font-weight: 300;
+}

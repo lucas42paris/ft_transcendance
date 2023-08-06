@@ -1,0 +1,139 @@
+generator client {
+	provider = "prisma-client-js"
+}
+
+datasource db {
+	provider = "postgresql"
+	url		 = env("DATABASE_URL")
+}
+
+model User {
+	id						Int @id @default(autoincrement())
+	createdAt				DateTime @default(now())
+	updatedAt				DateTime @updatedAt
+	name					String @unique
+	hash					String
+	wins					Int @default(0)
+	losses					Int @default(0)
+	ladder_level			Int @default(1)
+	oauthId					String
+	connected				Boolean @default(false)
+	playing					Boolean @default(false)
+	tfa						Boolean @default(false)
+	tfa_key					String
+	ladders					Int[]
+	wons					Boolean[]
+	gameDates				String[]
+	exp						Int @default(0)
+	userFriends				UserFriend[] @relation("UserFriendUser")
+	friendUsers				UserFriend[] @relation("UserFriendFriend")
+	userBlocks				UserBlock[] @relation("UserBlockUser")
+	blockedUsers			UserBlock[] @relation("UserBlockBlocked")
+	pongInvitationsSent		PongInvitation[] @relation("PongInvitationsSent")
+	pongInvitationsReceived	PongInvitation[] @relation("PongInvitationsReceived")
+	sentDMs					DirectMessage[] @relation("UserDMs")
+	receivedDMs				DirectMessage[] @relation("UserDMsReceived")
+	channels				Channel[] @relation("UserChannels")
+	ownedChannels			Channel[] @relation("owner")
+	administratedChannels	ChannelToUser[]
+	messages				ChanMessage[] @relation("UserMessage")
+
+	@@map("users")
+}
+
+model PongInvitation {
+	id			Int @id @default(autoincrement())
+	createdAt	DateTime @default(now())
+	userId		Int
+	invitedId	Int
+	accepted	Boolean @default(false)
+	refused		Boolean @default(false)
+	user		User @relation("PongInvitationsSent", fields: [userId], references: [id], onDelete: Cascade)
+	invited		User @relation("PongInvitationsReceived", fields: [invitedId], references: [id], onDelete: Cascade)
+
+	@@map("pong_invitations")
+}
+
+model UserFriend {
+	id			Int @id @default(autoincrement())
+	createdAt	DateTime @default(now())
+	userId		Int
+	friendId	Int
+	user		User @relation("UserFriendUser", fields: [userId], references: [id], onDelete: Cascade)
+	friend		User @relation("UserFriendFriend", fields: [friendId], references: [id], onDelete: Cascade)
+
+	@@map("user_friends")
+}
+
+
+model UserBlock {
+	id			Int @id @default(autoincrement())
+	createdAt	DateTime @default(now())
+	userId		Int
+	blockedId	Int
+	user		User @relation("UserBlockUser", fields: [userId], references: [id], onDelete: Cascade)
+	blockedUser	User @relation("UserBlockBlocked", fields: [blockedId], references: [id], onDelete: Cascade)
+
+	@@map("user_blocks")
+	@@unique([userId, blockedId])
+}
+
+model DirectMessage {
+	id			Int @id @default(autoincrement())
+	createdAt	DateTime @default(now())
+	content		String
+	senderId	Int
+	receiverId	Int
+	sender		User @relation("UserDMs", fields: [senderId], references: [id], onDelete: Cascade)
+	receiver	User @relation("UserDMsReceived", fields: [receiverId], references: [id], onDelete: Cascade)
+
+	@@map("direct_messages")
+}
+
+model ChannelToUser {
+	userId		Int
+	channelId	Int
+	isAdmin		Boolean @default(false)
+	muted		Boolean	@default(false)
+	banned		Boolean	@default(false)
+	user      User    @relation(fields: [userId], references: [id])
+	channel   Channel @relation(fields: [channelId], references: [id])
+	
+	@@id([userId, channelId])
+}
+
+model Channel {
+  id			Int      @id @default(autoincrement())
+  createdAt		DateTime @default(now())
+  updatedAt		DateTime @updatedAt
+  name			String @unique
+  password		String?
+  ispassword	Boolean @default(false)
+  private		Boolean @default(false)
+  users			User[]   @relation("UserChannels")
+  admins		ChannelToUser[]
+  type			ChatType @default(PUBLIC)
+  message		ChanMessage[]
+  ownerId		Int
+  owner			User @relation("owner", fields: [ownerId], references:[id])
+
+  @@map("channels")
+}
+
+model ChanMessage {
+	id			Int @id @default(autoincrement())
+	createdAt	DateTime @default(now())
+	content		String
+	sender		User @relation("UserMessage", fields: [senderId], references: [id])
+	senderId	Int
+	channel		Channel @relation(fields: [channelId], references: [id])
+	channelId	Int
+
+	@@map("Chanmessages")
+}
+
+enum ChatType {
+	PUBLIC
+	PRIVATE
+	PASSWORD
+}

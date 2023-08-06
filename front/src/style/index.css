@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url(media/pexels-roman-odintsov-4871011.jpg);
+  /* background-image: linear-gradient(to right, #030648, #3c00e1), radial-gradient(#0008FF, #000000); */
+  /* background-color: rgb(61, 61, 61); */
+  /* background: linear-gradient(45deg, #090043, #4d0404, #00254d, #004e68, #007e5b, #691500);
+  background-size: 400% 400%; */
+  /* background: linear-gradient(45deg, #FFC947, #F52472, #25BEBD, #B73A94, #33C3D9, #FF6B6B);
+  background-size: 400% 400%;
+  position: relative;
+  overflow: hidden; */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  background-color: white;
+
+}

@@ -1,0 +1,40 @@
+.message-container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	margin: 5px;
+  }
+  
+  .message {
+	word-break: break-word;
+	overflow-wrap: break-word;
+	max-width: 60%;
+	line-height: 1.5;
+	margin: 5px;
+	padding: 10px;
+	border-radius: 15px;
+	font-size: 1em;
+  }
+  
+  .message.sent {
+	  align-self: flex-end;
+	  background-color: #0b93f6;
+	  color: white;
+  }
+  
+  .message.received {
+	  align-self: flex-start;
+	  background-color: #e5e5ea;
+	  color: black;
+  }
+
+  .chat-box {
+	padding-bottom: 55px;
+	overflow-y: scroll;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+  }
+
+  .chat-box::-webkit-scrollbar {
+	display: none;  /* Chrome, Safari and Opera */
+  }

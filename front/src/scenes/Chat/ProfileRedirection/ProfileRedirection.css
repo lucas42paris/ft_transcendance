@@ -1,0 +1,30 @@
+.userAvatar {
+    max-width : 200px;
+    height : 200px;
+    border-radius: 50%;
+}
+
+.userProfileContainer {
+    margin: 0% 35% 1% 35%;
+}
+
+.userInformations {
+    display: flex;
+    flex-direction: column;
+    border: solid 1px;
+    margin: 3%;
+    padding: 5%;
+    background-color: rgb(10, 37, 39);
+}
+
+.userInformationKey {
+    margin: 1%;
+    font-weight: 300;
+}
+
+.userInformationValue {
+    margin-bottom: 2%;
+    margin-top: 0%;
+    font-size: large;
+    font-weight: bold;
+}

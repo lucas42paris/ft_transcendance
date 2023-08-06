@@ -1,0 +1,52 @@
+.friends {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.friends table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+	table-layout: fixed;
+	border-radius: 1.5em;
+	overflow: hidden;
+	border: 0.1em solid #fff;
+}
+
+.friends th {
+	border: none;
+	padding: 1.5em;
+	text-align: center;
+	word-wrap: break-word;
+}
+
+.friends td {
+	border: 0.1em solid #fff;
+	padding: 1.5em;
+	text-align: center;
+	word-wrap: break-word;
+}
+
+.online-indicator, .offline-indicator, .playing-indicator {
+	background-color: green;
+	width: 0.7em;
+	height: 0.7em;
+	border-radius: 50%;
+	display: inline-block;
+	margin-right: 0.5em;
+}
+
+.offline-indicator {
+	background-color: red;
+}
+
+.playing-indicator {
+	background-color: yellow;
+}
+
+.friends td {
+	border: 0.1em solid #fff;
+	padding: 1.5em;
+	text-align: center;
+	word-wrap: break-word;
+}
