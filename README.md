@@ -26,7 +26,7 @@ The project was carried out with Benjamin Aubignat, Maxime Saintonge and Félix 
 
 __Features to implement__:
 
-* Connection to the website with the OAuth of the 42 intranet.
+* Connection to the website with the 42 intranet OAuth.
 * User account system with the possibility of modifying your username, adding/modifying your avatar, enabling two-factor authentication (2FA).
 * Reproduce the famous Pong game. Users must be able to play against each other with a matchmaking system.
 * A Chat system allowing the creation of channels, the sending of private messages and the management of users.
